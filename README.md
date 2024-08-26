@@ -1,4 +1,4 @@
-![Screenshot 2024-08-27 014628](https://github.com/user-attachments/assets/3a416c58-762f-4532-abe7-eaa2cd9bf959)# Both the PHP and Python scripts are used to sync local mysql db to remote mysql db.
+# Both the PHP and Python scripts are used to sync local mysql db to remote mysql db.
 # Features :
 <pre>
     1. It will check for the tables in the remote database,

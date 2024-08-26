@@ -1,4 +1,4 @@
-# This PHP script is used to sync local mysql db to remote mysql db.
+![Screenshot 2024-08-27 014628](https://github.com/user-attachments/assets/3a416c58-762f-4532-abe7-eaa2cd9bf959)# Both the PHP and Python scripts are used to sync local mysql db to remote mysql db.
 # Features :
 <pre>
     1. It will check for the tables in the remote database,
@@ -32,4 +32,20 @@
               In my case I have time_stamp across all the tables.
 
 </pre>
+# PHP Limitations
+<pre> It took around 10 minutes to sync around 10k records due to it's limitations in parallel processing </pre>
 
+# Python Record time SYNC
+<pre>
+    1. Using Python's asyncio and aiomysql
+        After creating all the tables
+    2. Parallely we open a pool of mysql remote connections to all the tables
+       Then for insertions we used batch process that operates in a async fashion.
+       Achieved a record time for sync, around 1 lakh records.
+</pre>
+            --- 10.03 Total Execution Seconds ---
+            --- 0.17 Total Execution Minutes ---
+            
+  !![Screenshot 2024-08-27 014544](https://github.com/user-attachments/assets/46046b44-0692-4779-98f2-deee109efc41)
+  ![Screenshot 2024-08-27 015909](https://github.com/user-attachments/assets/4dd51495-eacc-413c-ad4c-f94c0bfe7097)
+  ![Screenshot 2024-08-27 014628](https://github.com/user-attachments/assets/a0839020-b19d-4817-ab0f-ac5053042e5b)

@@ -1,5 +1,5 @@
 # This PHP script is used to sync local mysql db to remote mysql db.
-Features :
+# Features :
 <pre>
     1. It will check for the tables in the remote database,
           if the table not exists on the remote database,
@@ -19,9 +19,17 @@ Features :
          it will automatically get the structure using
          * SHOW Tables
          * DESCRIBE Tables
-  
-#Requiremnt : All tables should have an Column that captures last_updated or modified time
-              In my case I have time_stamp across all the tables.
           
-</pre> 
+</pre>
+
+# Requirements : 
+<pre>
+    1. You need to install the doctrine/dbal Package
+
+        composer require doctrine/dbal
+    
+    2. All tables must have an Column that captures last_updated or modified time
+              In my case I have time_stamp across all the tables.
+
+</pre>
 

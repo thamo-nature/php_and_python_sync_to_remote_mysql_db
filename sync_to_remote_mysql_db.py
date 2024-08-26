@@ -11,7 +11,7 @@ local_db_config = {
     'host': 'localhost',
     'user': 'root',
     'password': '',
-    'db': 'smartivf',
+    'db': 'local_db',
     'charset': 'utf8mb4',
 }
 
